@@ -19,6 +19,12 @@ class Ycontroller:
                     self.play_ai_round(i)
                 else:
                     self.play_round(i)
+        
+        self.show_final_board()
+    
+    def show_final_board(self):
+        print("Final Scores")
+        self.yv.show_board()
 
     def play_round(self, p_num: int):
         self.yv.show_board()
