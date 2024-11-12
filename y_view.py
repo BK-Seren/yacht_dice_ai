@@ -129,6 +129,12 @@ class Yview:
                 break
         return cmd
 
+def show_final_scores(self):
+    print("Final Scores:")
+    for i, player in enumerate(self.ym.players):
+        total_score = sum(player.board.score) + player.board.score.count(-1)
+        print(f"Player {i + 1}: {total_score}")
+
 
     def ask_dice_keep(self)->list:
         keep_list = [False]*5
@@ -156,7 +162,11 @@ class Yview:
             else:
                 print("Invalid input. Please enter numbers between 1 and 5.")
 
-
+def show_final_scores(self):
+    print("Final Scores:")
+    for i, player in enumerate(self.ym.players):
+        total_score = sum(player.board.score) + player.board.score.count(-1)
+        print(f"Player {i + 1}: {total_score}")
 
     def ask_submit_idx(self,p_num:int,expt_s:list)->int:
         if 1 not in self.ym.players[p_num].history:
