@@ -162,10 +162,6 @@ class Yview:
             else:
                 print("Invalid input. Please enter numbers between 1 and 5.")
 
-    def show_final_board(self):
-        print("Final Scores")
-        self.show_board()
-
     def ask_submit_idx(self,p_num:int,expt_s:list)->int:
         if 1 not in self.ym.players[p_num].history:
             print("1: aces("+str(expt_s[0])+")")
@@ -199,12 +195,4 @@ class Yview:
             if 1<=idx and idx<=13 and (idx not in self.ym.players[p_num].history):
                 break
         return idx
-        
-                
-
-            
-
-
-
-            
 
