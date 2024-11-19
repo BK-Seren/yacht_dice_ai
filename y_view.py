@@ -11,7 +11,7 @@ class Yview:
     
     def show_board(self):
         p_l_len = len(self.ym.players)
-        print("                ",end='')
+        print("             ",end='')
         for i in range(p_l_len):
             print("\tp"+str(i+1),end='')
         print("")
@@ -198,11 +198,11 @@ class Yview:
 
         # 순위 정렬 후 출력
         players.sort(key=lambda x: sum(x.board.score), reverse=True)
-        print(" rank  |  player name  |  total_score ")
-        print("=" * 30)
+        print("  rank  |  player name  |  total_score  ")
+        print("=" * 36)
         for rank, player in enumerate(players, start=1):
             total_score = sum(player.board.score) + player.board.score.count(-1)
-            print(f"{rank}     |  Player{rank}     |  {total_score}")
+            print(f"   {rank}   |    Player{rank}    |   {total_score}   ")
         
                 
 
