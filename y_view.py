@@ -191,6 +191,18 @@ class Yview:
             if 1<=idx and idx<=13 and (idx not in self.ym.players[p_num].history):
                 break
         return idx
+
+    def show_final_results(self, players):
+        print("Game End! Final Score:")
+        self.show_board()
+
+        # 순위 정렬 후 출력
+        players.sort(key=lambda x: sum(x.board.score), reverse=True)
+        print(" rank  |  player name  |  total_score ")
+        print("=" * 30)
+        for rank, player in enumerate(players, start=1):
+            total_score = sum(player.board.score) + player.board.score.count(-1)
+            print(f"{rank}     |  Player{rank}     |  {total_score}")
         
                 
 

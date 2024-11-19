@@ -20,9 +20,13 @@ class Ycontroller:
                 else:
                     self.play_round(i)
 
+        self.yv.show_final_results(self.ym.players)  # 최종 점수 (순위표) 출력
+
     def play_round(self, p_num: int):
         self.yv.show_board()
         roll_count: int = 0
+
+        # 주사위 굴리기 및 선택 로직
         while roll_count < 3:
             if roll_count == 0:
                 keep_list = [False] * 5
