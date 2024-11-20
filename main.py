@@ -22,6 +22,7 @@ for name in player_names:
 # 게임 반복
 for _ in range(NUM_GAMES):
     # 새로운 게임 초기화
+    print(f"============================================================={_}/{NUM_GAMES}")
     m = Ymodel()
     v = Yview(m)
     Ycontroller(m, v)

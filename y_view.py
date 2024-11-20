@@ -198,7 +198,7 @@ class Yview:
 
     def show_final_results(self, players):
         print("Game End! Final Score:")
-        self.show_board()
+        self.show_board()   # 최종 항목당 점수 보드 안보이게 하고 싶으면 여기를 주석처리 하세요!
 
         # 순위 정렬 후 출력
         players.sort(key=lambda x: sum(x.board.score), reverse=True)
