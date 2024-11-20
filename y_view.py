@@ -7,9 +7,11 @@ class Yview:
         self.ym = y_model
 
     def show_round(self, round:int):
-        print("Round: "+str(round)+"/13")
+        #print("Round: "+str(round)+"/13")
+        pass
     
     def show_board(self):
+
         p_l_len = len(self.ym.players)
         print("             ",end='')
         for i in range(p_l_len):
@@ -117,9 +119,11 @@ class Yview:
         for i in range(p_l_len):
             print("\t"+str(sum(self.ym.players[i].board.score)+self.ym.players[i].board.score.count(-1)),end='')
         print("")
+
     
     def show_dices(self):
-        print(self.ym.dices)
+        pass
+        #print(self.ym.dices)
 
     def ask_cmd(self)->str:
         while True:
@@ -202,13 +206,5 @@ class Yview:
         print("=" * 36)
         for rank, player in enumerate(players, start=1):
             total_score = sum(player.board.score) + player.board.score.count(-1)
-            print(f"   {rank}   |    Player{rank}    |   {total_score}   ")
-        
-                
-
-            
-
-
-
-            
+            print(f"   {rank}   |    {player.name}    |   {total_score}   ")
 
